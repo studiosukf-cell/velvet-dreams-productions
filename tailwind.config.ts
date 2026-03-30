@@ -60,6 +60,15 @@ export default {
           DEFAULT: "hsl(var(--deep-red))",
           light: "hsl(var(--deep-red-light))",
         },
+        "neon-pink": {
+          DEFAULT: "hsl(var(--neon-pink))",
+        },
+        "neon-blue": {
+          DEFAULT: "hsl(var(--neon-blue))",
+        },
+        "electric-purple": {
+          DEFAULT: "hsl(var(--electric-purple))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",

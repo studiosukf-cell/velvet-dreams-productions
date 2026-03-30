@@ -2,6 +2,7 @@ import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Shield, Award, Users, Camera } from "lucide-react";
+import StudioLocations from "@/components/StudioLocations";
 import btsBg from "@/assets/bts-production.jpg";
 
 const values = [
@@ -54,6 +55,8 @@ const About = () => (
         </div>
       </div>
     </section>
+
+    <StudioLocations />
 
     <section className="section-padding text-center">
       <div className="container max-w-2xl">

@@ -6,50 +6,54 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 0 0% 12%;
+    --background: 230 20% 12%;
+    --foreground: 220 15% 90%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 12%;
+    --card: 230 20% 16%;
+    --card-foreground: 220 15% 90%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 12%;
+    --popover: 230 20% 16%;
+    --popover-foreground: 220 15% 90%;
 
-    --primary: 43 72% 45%;
+    --primary: 330 70% 55%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 40 20% 94%;
-    --secondary-foreground: 0 0% 12%;
+    --secondary: 230 18% 20%;
+    --secondary-foreground: 220 15% 85%;
 
-    --muted: 40 15% 92%;
-    --muted-foreground: 0 0% 40%;
+    --muted: 230 15% 22%;
+    --muted-foreground: 220 10% 55%;
 
-    --accent: 0 55% 45%;
+    --accent: 210 80% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 40 15% 88%;
-    --input: 40 15% 88%;
-    --ring: 43 72% 45%;
+    --border: 230 15% 22%;
+    --input: 230 15% 22%;
+    --ring: 330 70% 55%;
 
     --radius: 0.75rem;
 
-    --gold: 43 72% 45%;
-    --gold-light: 43 65% 58%;
-    --gold-dark: 43 60% 35%;
-    --deep-red: 0 55% 45%;
-    --deep-red-light: 0 45% 55%;
+    --gold: 330 70% 55%;
+    --gold-light: 330 60% 65%;
+    --gold-dark: 330 75% 42%;
+    --deep-red: 210 80% 55%;
+    --deep-red-light: 210 65% 65%;
 
-    --sidebar-background: 0 0% 97%;
-    --sidebar-foreground: 0 0% 12%;
-    --sidebar-primary: 43 72% 45%;
+    --neon-pink: 330 85% 60%;
+    --neon-blue: 210 90% 58%;
+    --electric-purple: 270 65% 55%;
+
+    --sidebar-background: 230 20% 14%;
+    --sidebar-foreground: 220 15% 90%;
+    --sidebar-primary: 330 70% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 40 15% 92%;
-    --sidebar-accent-foreground: 0 0% 12%;
-    --sidebar-border: 40 15% 88%;
-    --sidebar-ring: 43 72% 45%;
+    --sidebar-accent: 230 15% 22%;
+    --sidebar-accent-foreground: 220 15% 85%;
+    --sidebar-border: 230 15% 22%;
+    --sidebar-ring: 330 70% 55%;
 
     --font-display: 'Cormorant Garamond', Georgia, serif;
     --font-body: 'DM Sans', system-ui, sans-serif;
@@ -73,14 +77,18 @@
 
 @layer components {
   .gradient-gold {
-    background: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)), hsl(var(--gold-light)));
+    background: linear-gradient(135deg, hsl(var(--neon-pink)), hsl(var(--electric-purple)), hsl(var(--neon-blue)));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .gradient-gold-bg {
-    background: linear-gradient(135deg, hsl(var(--gold-dark)), hsl(var(--gold)));
+    background: linear-gradient(135deg, hsl(var(--neon-pink)), hsl(var(--gold-dark)));
+  }
+
+  .gradient-pink-blue-bg {
+    background: linear-gradient(135deg, hsl(var(--neon-pink)), hsl(var(--neon-blue)));
   }
 
   .gradient-red-bg {
@@ -88,15 +96,23 @@
   }
 
   .glass-card {
-    @apply bg-card/80 backdrop-blur-md border border-border shadow-sm;
+    @apply bg-card/70 backdrop-blur-md border border-border/50 shadow-lg;
   }
 
   .glow-gold {
-    box-shadow: 0 0 30px -5px hsl(var(--gold) / 0.25);
+    box-shadow: 0 0 30px -5px hsl(var(--neon-pink) / 0.35), 0 0 60px -10px hsl(var(--neon-blue) / 0.2);
   }
 
   .glow-red {
     box-shadow: 0 0 30px -5px hsl(var(--deep-red) / 0.3);
+  }
+
+  .glow-pink {
+    box-shadow: 0 0 40px -8px hsl(var(--neon-pink) / 0.4);
+  }
+
+  .glow-blue {
+    box-shadow: 0 0 40px -8px hsl(var(--neon-blue) / 0.4);
   }
 
   .text-gold {
@@ -112,7 +128,7 @@
   }
   .hover-lift:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px -8px hsl(var(--gold) / 0.15);
+    box-shadow: 0 12px 40px -8px hsl(var(--neon-pink) / 0.2);
   }
 
   .section-padding {
@@ -120,7 +136,7 @@
   }
 
   .cinematic-overlay {
-    background: linear-gradient(180deg, hsl(0 0% 100% / 0.3) 0%, hsl(0 0% 100% / 0.5) 40%, hsl(0 0% 98% / 0.85) 100%);
+    background: linear-gradient(180deg, hsl(230 20% 12% / 0.5) 0%, hsl(230 20% 12% / 0.7) 40%, hsl(230 20% 12% / 0.92) 100%);
   }
 
   /* Flip card */

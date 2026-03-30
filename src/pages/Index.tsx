@@ -5,6 +5,7 @@ import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import FlipCard from "@/components/FlipCard";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
+import StudioLocations from "@/components/StudioLocations";
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-light.jpg";
 import btsBg from "@/assets/bts-production.jpg";
@@ -259,6 +260,9 @@ const Index = () => (
         </AnimatedSection>
       </div>
     </section>
+
+    {/* Studio Locations */}
+    <StudioLocations />
 
     {/* CTA */}
     <section className="section-padding relative overflow-hidden">
