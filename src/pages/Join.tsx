@@ -4,8 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Shield, CheckCircle, Send } from "lucide-react";
+import { Shield, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const steps = [
   { num: "01", title: "Submit Your Application", desc: "Fill out the simple form below with your details." },
@@ -17,20 +18,39 @@ const steps = [
 const Join = () => {
   const { toast } = useToast();
   const [submitting, setSubmitting] = useState(false);
+  const [experience, setExperience] = useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
-      toast({ title: "Application Received", description: "We'll be in touch within 24 hours." });
-      (e.target as HTMLFormElement).reset();
-    }, 1500);
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+
+    const { error } = await supabase.from("performer_applications").insert({
+      full_name: formData.get("full_name") as string,
+      age: parseInt(formData.get("age") as string),
+      email: formData.get("email") as string,
+      phone: (formData.get("phone") as string) || null,
+      location: formData.get("location") as string,
+      experience_level: experience || null,
+      about: (formData.get("about") as string) || null,
+    });
+
+    setSubmitting(false);
+
+    if (error) {
+      toast({ title: "Error", description: "Something went wrong. Please try again.", variant: "destructive" });
+      return;
+    }
+
+    toast({ title: "Application Received", description: "We'll be in touch within 24 hours." });
+    form.reset();
+    setExperience("");
   };
 
   return (
     <Layout>
-      {/* Hero */}
       <section className="section-padding text-center">
         <div className="container max-w-3xl">
           <p className="text-gold uppercase tracking-[0.3em] text-sm font-medium mb-4">Join Our Team</p>
@@ -43,7 +63,6 @@ const Join = () => {
         </div>
       </section>
 
-      {/* Steps */}
       <section className="section-padding !pt-0">
         <div className="container max-w-4xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -58,7 +77,6 @@ const Join = () => {
         </div>
       </section>
 
-      {/* Form */}
       <section className="section-padding bg-secondary/30">
         <div className="container max-w-2xl">
           <div className="glass-card rounded-xl p-8 md:p-12">
@@ -69,13 +87,13 @@ const Join = () => {
 
             <form onSubmit={handleSubmit} className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <Input placeholder="Full Name" required className="bg-background/50 border-border" />
-                <Input type="number" placeholder="Age" min={18} required className="bg-background/50 border-border" />
+                <Input name="full_name" placeholder="Full Name" required className="bg-background/50 border-border" />
+                <Input name="age" type="number" placeholder="Age" min={18} required className="bg-background/50 border-border" />
               </div>
-              <Input type="email" placeholder="Email Address" required className="bg-background/50 border-border" />
-              <Input type="tel" placeholder="Phone Number" className="bg-background/50 border-border" />
-              <Input placeholder="Location (City, UK)" required className="bg-background/50 border-border" />
-              <Select>
+              <Input name="email" type="email" placeholder="Email Address" required className="bg-background/50 border-border" />
+              <Input name="phone" type="tel" placeholder="Phone Number" className="bg-background/50 border-border" />
+              <Input name="location" placeholder="Location (City, UK)" required className="bg-background/50 border-border" />
+              <Select value={experience} onValueChange={setExperience}>
                 <SelectTrigger className="bg-background/50 border-border">
                   <SelectValue placeholder="Experience Level" />
                 </SelectTrigger>
@@ -85,7 +103,7 @@ const Join = () => {
                   <SelectItem value="experienced">Experienced</SelectItem>
                 </SelectContent>
               </Select>
-              <Textarea placeholder="Tell us a bit about yourself (optional)" className="bg-background/50 border-border min-h-[100px]" />
+              <Textarea name="about" placeholder="Tell us a bit about yourself (optional)" className="bg-background/50 border-border min-h-[100px]" />
 
               <div className="flex items-start gap-3 p-4 rounded-lg bg-background/30 border border-border/50">
                 <Shield size={20} className="text-gold mt-0.5 flex-shrink-0" />
