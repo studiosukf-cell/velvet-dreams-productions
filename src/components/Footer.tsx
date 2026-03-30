@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
 const Footer = () => (
-  <footer className="bg-secondary/50 border-t border-border/50 section-padding !py-12">
+  <footer className="bg-secondary/50 border-t border-border section-padding !py-12">
     <div className="container">
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
         <div>
           <h3 className="text-2xl font-display font-bold gradient-gold mb-4">ELITEFRAME</h3>
           <p className="text-muted-foreground text-sm leading-relaxed max-w-xs">
@@ -11,15 +11,28 @@ const Footer = () => (
           </p>
         </div>
         <div>
-          <h4 className="font-display text-lg font-semibold text-gold mb-4">Quick Links</h4>
+          <h4 className="font-display text-lg font-semibold text-gold mb-4">Pages</h4>
           <nav className="flex flex-col gap-2">
             {[
               { label: "Home", to: "/" },
               { label: "Join as Performer", to: "/join" },
               { label: "About Us", to: "/about" },
               { label: "Gallery", to: "/gallery" },
+            ].map((link) => (
+              <Link key={link.to} to={link.to} className="text-sm text-muted-foreground hover:text-gold transition-colors">
+                {link.label}
+              </Link>
+            ))}
+          </nav>
+        </div>
+        <div>
+          <h4 className="font-display text-lg font-semibold text-gold mb-4">Resources</h4>
+          <nav className="flex flex-col gap-2">
+            {[
+              { label: "Blog", to: "/blog" },
               { label: "FAQ", to: "/faq" },
               { label: "Contact", to: "/contact" },
+              { label: "Admin", to: "/admin" },
             ].map((link) => (
               <Link key={link.to} to={link.to} className="text-sm text-muted-foreground hover:text-gold transition-colors">
                 {link.label}
@@ -33,7 +46,7 @@ const Footer = () => (
           <p className="text-sm text-muted-foreground">London, United Kingdom</p>
         </div>
       </div>
-      <div className="border-t border-border/50 mt-10 pt-6 text-center">
+      <div className="border-t border-border mt-10 pt-6 text-center">
         <p className="text-xs text-muted-foreground">&copy; {new Date().getFullYear()} EliteFrame Productions. All rights reserved. 18+ only.</p>
       </div>
     </div>
