@@ -8,6 +8,7 @@ const navLinks = [
   { label: "Join", to: "/join" },
   { label: "About", to: "/about" },
   { label: "Gallery", to: "/gallery" },
+  { label: "Blog", to: "/blog" },
   { label: "FAQ", to: "/faq" },
   { label: "Contact", to: "/contact" },
 ];
@@ -19,17 +20,17 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="font-display text-2xl md:text-3xl font-bold tracking-wider text-gold">
+        <Link to="/" className="font-display text-2xl md:text-3xl font-bold tracking-wider gradient-gold">
           ELITEFRAME
         </Link>
 
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.to}
               to={link.to}
               className={`text-sm font-medium tracking-wide uppercase transition-colors hover:text-gold ${
-                location.pathname === link.to ? "text-gold" : "text-foreground/70"
+                location.pathname === link.to ? "text-gold" : "text-foreground/60"
               }`}
             >
               {link.label}
@@ -63,7 +64,7 @@ const Header = () => {
                 to={link.to}
                 onClick={() => setOpen(false)}
                 className={`text-lg font-medium tracking-wide transition-colors hover:text-gold ${
-                  location.pathname === link.to ? "text-gold" : "text-foreground/70"
+                  location.pathname === link.to ? "text-gold" : "text-foreground/60"
                 }`}
               >
                 {link.label}

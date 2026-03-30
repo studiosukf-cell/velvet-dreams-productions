@@ -7,8 +7,10 @@ import Index from "./pages/Index";
 import Join from "./pages/Join";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
+import Blog from "./pages/Blog";
 import Faq from "./pages/Faq";
 import Contact from "./pages/Contact";
+import Admin from "./pages/Admin";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,8 +26,10 @@ const App = () => (
           <Route path="/join" element={<Join />} />
           <Route path="/about" element={<About />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

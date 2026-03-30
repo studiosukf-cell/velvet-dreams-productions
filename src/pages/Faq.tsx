@@ -1,7 +1,9 @@
 import Layout from "@/components/Layout";
+import AnimatedSection from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { motion } from "framer-motion";
 
 const faqs = [
   { q: "Do I need experience?", a: "Not at all. Many of our performers start with zero experience. We provide full guidance, direction, and support on set to help you feel comfortable and confident." },
@@ -17,11 +19,13 @@ const Faq = () => (
   <Layout>
     <section className="section-padding text-center">
       <div className="container max-w-3xl">
-        <p className="text-gold uppercase tracking-[0.3em] text-sm font-medium mb-4">Support</p>
-        <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-          Frequently Asked <span className="gradient-gold">Questions</span>
-        </h1>
-        <p className="text-foreground/70 text-lg">Everything you need to know before getting started.</p>
+        <AnimatedSection>
+          <p className="text-gold uppercase tracking-[0.3em] text-sm font-medium mb-4">Support</p>
+          <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
+            Frequently Asked <span className="gradient-gold">Questions</span>
+          </h1>
+          <p className="text-muted-foreground text-lg">Everything you need to know before getting started.</p>
+        </AnimatedSection>
       </div>
     </section>
 
@@ -29,28 +33,32 @@ const Faq = () => (
       <div className="container max-w-3xl">
         <Accordion type="single" collapsible className="space-y-3">
           {faqs.map((faq, i) => (
-            <AccordionItem key={i} value={`faq-${i}`} className="glass-card rounded-lg px-6 border-none">
-              <AccordionTrigger className="font-display text-lg font-semibold hover:no-underline text-left py-5">
-                {faq.q}
-              </AccordionTrigger>
-              <AccordionContent className="text-foreground/70 pb-5">
-                {faq.a}
-              </AccordionContent>
-            </AccordionItem>
+            <AnimatedSection key={i} delay={i * 0.06}>
+              <AccordionItem value={`faq-${i}`} className="glass-card rounded-lg px-6 border-none">
+                <AccordionTrigger className="font-display text-lg font-semibold hover:no-underline text-left py-5">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-5">
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            </AnimatedSection>
           ))}
         </Accordion>
 
-        <div className="text-center mt-16">
-          <p className="text-foreground/70 mb-4">Still have questions?</p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button variant="outline" className="border-gold/40 text-gold hover:bg-gold/10">Contact Us</Button>
-            </Link>
-            <Link to="/join">
-              <Button className="gradient-gold-bg text-primary-foreground font-bold glow-gold hover:opacity-90">Apply Now</Button>
-            </Link>
+        <AnimatedSection delay={0.4}>
+          <div className="text-center mt-16">
+            <p className="text-muted-foreground mb-4">Still have questions?</p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact">
+                <Button variant="outline" className="border-gold/40 text-gold hover:bg-gold/10">Contact Us</Button>
+              </Link>
+              <Link to="/join">
+                <Button className="gradient-gold-bg text-primary-foreground font-bold glow-gold hover:opacity-90">Apply Now</Button>
+              </Link>
+            </div>
           </div>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   </Layout>
