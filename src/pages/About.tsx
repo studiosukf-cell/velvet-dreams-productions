@@ -56,6 +56,8 @@ const About = () => (
       </div>
     </section>
 
+    <StudioLocations />
+
     <section className="section-padding text-center">
       <div className="container max-w-2xl">
         <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Join Our <span className="gradient-gold">Team</span></h2>

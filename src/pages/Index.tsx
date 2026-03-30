@@ -261,6 +261,9 @@ const Index = () => (
       </div>
     </section>
 
+    {/* Studio Locations */}
+    <StudioLocations />
+
     {/* CTA */}
     <section className="section-padding relative overflow-hidden">
       <div className="absolute inset-0 gradient-gold-bg opacity-10" />
