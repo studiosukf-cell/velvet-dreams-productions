@@ -3,16 +3,16 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { motion } from "framer-motion";
 
 const faqs = [
-  { q: "Do I need experience?", a: "Not at all. Many of our performers start with zero experience. We provide full guidance, direction, and support on set to help you feel comfortable and confident." },
-  { q: "How much can I earn?", a: "Rates range from £300 to £2,000 per shoot depending on the type of production. Payment is made on the day of filming — no waiting around." },
-  { q: "Is this confidential?", a: "Absolutely. We take discretion extremely seriously. Your personal details are never shared, and we operate under strict privacy protocols at every stage." },
-  { q: "Where are shoots located?", a: "Most productions take place in professional studios across London and the South East, though we also film at other UK locations depending on the project." },
-  { q: "What should I expect on set?", a: "A professional, well-organised environment. You'll be briefed beforehand, introduced to the team, and walked through everything step by step. Performer welfare is always our top priority." },
-  { q: "Can I choose what I'm comfortable with?", a: "Yes. You are never asked to do anything you haven't agreed to. Boundaries are discussed and respected before filming begins." },
-  { q: "How do I apply?", a: "Simply fill out the application form on our Join page. We review submissions within 24 hours and get in touch for a brief, discreet conversation." },
+  { q: "What types of jobs are available?", a: "We offer a variety of adult film and cam job opportunities, including performer roles, studio management, and tech support. Whether you're a beginner or experienced, there are positions for everyone." },
+  { q: "Do I need previous experience to apply?", a: "No experience is necessary for most positions. We provide training and guidance for newcomers, especially for models and studio managers." },
+  { q: "What is the pay like?", a: "Pay varies depending on the role and performance, but performers can earn between £500 to £3,000 per scene, and studio managers can earn competitive salaries based on experience and studio performance." },
+  { q: "How do I apply for a position?", a: "You can apply by submitting an online application through our website. Simply fill out the relevant form for the role you're interested in, and our recruitment team will contact you for further details." },
+  { q: "Is there an age requirement?", a: "You must be at least 18 years old to apply for any of our adult-related positions. Age verification is required as part of the application process." },
+  { q: "Are masks or specific outfits required for shoots?", a: "For most shoots, masks are optional. However, specific outfits and attire may be requested depending on the type of scene. We prioritize comfort and safety for all our performers." },
+  { q: "How does Infinity Adult Studios ensure performer safety?", a: "We have strict safety protocols in place, including regular health checks, on-set safety measures, and professional coaching. Our goal is to create a safe and empowering environment for all performers." },
+  { q: "Can I work with Infinity Adult Studios remotely?", a: "Yes, we offer opportunities for remote work, including cam modeling and online brand building. You can collaborate with our team to create content from the comfort of your own space." },
 ];
 
 const Faq = () => (
