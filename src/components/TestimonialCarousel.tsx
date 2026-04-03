@@ -3,11 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
-  { name: "Alex R.", text: "I was nervous at first, but the team made me feel completely at ease. The pay was incredible for a day's work.", role: "Performer — 6 months", avatar: "AR" },
-  { name: "Sophie M.", text: "Professional from start to finish. Discreet, respectful, and the earning potential is unmatched.", role: "Performer — 1 year", avatar: "SM" },
-  { name: "James & Tara", text: "We joined as a couple and it's been an amazing experience. Flexible, well-paid, and genuinely fun.", role: "Couple — 3 months", avatar: "JT" },
-  { name: "Chris D.", text: "The team respects boundaries and the whole process is very well organised. Would recommend to anyone.", role: "Performer — 8 months", avatar: "CD" },
-  { name: "Emily L.", text: "The level of professionalism blew me away. I felt safe and valued from the very first conversation.", role: "Performer — 4 months", avatar: "EL" },
+  { name: "Lexi Rose", text: "Infinity Studios helped launch my career. Everything is professional, supportive, and empowering.", role: "Performer", avatar: "LR" },
+  { name: "Jordan Blake", text: "The team really cares about your success. Great equipment, great people, and great vibes.", role: "Performer", avatar: "JB" },
+  { name: "Mia Vixen", text: "I was nervous starting out, but the support and training made me feel confident and in control.", role: "New Talent", avatar: "MV" },
 ];
 
 const TestimonialCarousel = () => {

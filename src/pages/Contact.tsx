@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MessageCircle, MapPin } from "lucide-react";
+import { Phone, MessageCircle, MapPin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
@@ -44,21 +44,21 @@ const Contact = () => {
           <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
             Contact <span className="gradient-gold">Us</span>
           </h1>
-          <p className="text-foreground/70 text-lg">We'd love to hear from you. Reach out via any of the channels below.</p>
+          <p className="text-foreground/70 text-lg">Have questions or want to join Infinity Adult Studios? Reach out to our team.</p>
         </div>
       </section>
 
       <section className="section-padding !pt-0">
         <div className="container max-w-5xl">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-12">
-            <a href="mailto:info@eliteframe.co.uk" className="glass-card rounded-lg p-6 text-center hover-lift">
+            <a href="tel:+447920451830" className="glass-card rounded-lg p-6 text-center hover-lift">
               <div className="w-14 h-14 rounded-full gradient-gold-bg flex items-center justify-center mx-auto mb-4">
-                <Mail size={22} className="text-primary-foreground" />
+                <Phone size={22} className="text-primary-foreground" />
               </div>
-              <h3 className="font-display text-lg font-semibold mb-1">Email</h3>
-              <p className="text-muted-foreground text-sm">info@eliteframe.co.uk</p>
+              <h3 className="font-display text-lg font-semibold mb-1">Phone</h3>
+              <p className="text-muted-foreground text-sm">07920 451 830</p>
             </a>
-            <a href="https://wa.me/447000000000" target="_blank" rel="noopener noreferrer" className="glass-card rounded-lg p-6 text-center hover-lift">
+            <a href="https://wa.me/447920451830" target="_blank" rel="noopener noreferrer" className="glass-card rounded-lg p-6 text-center hover-lift">
               <div className="w-14 h-14 rounded-full bg-[hsl(142,70%,35%)] flex items-center justify-center mx-auto mb-4">
                 <MessageCircle size={22} className="text-foreground" />
               </div>
@@ -70,7 +70,7 @@ const Contact = () => {
                 <MapPin size={22} className="text-neon-pink" />
               </div>
               <h3 className="font-display text-lg font-semibold mb-1">Location</h3>
-              <p className="text-muted-foreground text-sm">London, United Kingdom</p>
+              <p className="text-muted-foreground text-sm">Bridge Street, Manchester, M3 3BW</p>
             </div>
           </div>
 
