@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Shield, Award, Users, Camera } from "lucide-react";
 import StudioLocations from "@/components/StudioLocations";
 import AnimatedSection from "@/components/AnimatedSection";
-import btsBg from "@/assets/bts-production.jpg";
+import studioImg from "@/assets/studio-interior.jpg";
 
 const values = [
   { icon: Shield, title: "Safety First", desc: "Rigorous consent protocols, health screenings, and a zero-tolerance policy for unprofessional behaviour." },
