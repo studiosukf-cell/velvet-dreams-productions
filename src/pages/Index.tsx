@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Shield, DollarSign, Clock, Users, ArrowRight } from "lucide-react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
