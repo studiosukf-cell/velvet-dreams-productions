@@ -63,12 +63,12 @@ const Gallery = () => {
             ))}
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {filtered.map((item, i) => (
               <AnimatedSection key={item.id} delay={i * 0.05}>
                 <motion.div
                   whileHover={{ y: -4 }}
-                  className="group relative aspect-[4/5] rounded-lg overflow-hidden cursor-pointer"
+                  className="group relative aspect-[3/2] rounded-lg overflow-hidden cursor-pointer"
                 >
                   <img
                     src={item.image}

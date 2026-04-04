@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Shield, DollarSign, Clock, Users, ArrowRight } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
@@ -14,6 +15,15 @@ const trustPoints = [
   { icon: DollarSign, title: "High Earnings", desc: "Performers can earn between £500 to £3,000 per scene" },
   { icon: Clock, title: "Flexible Schedule", desc: "Work around your availability — no commitments" },
   { icon: Users, title: "All Levels Welcome", desc: "No prior experience required to get started" },
+];
+
+const homeFaqs = [
+  { q: "What types of jobs are available?", a: "We offer a variety of adult film and cam job opportunities, including performer roles, studio management, OnlyFans management, and tech support. Whether you're a beginner or experienced, there are positions for everyone." },
+  { q: "Do I need previous experience to apply?", a: "No experience is necessary for most positions. We provide full training and guidance for newcomers, especially for models and studio managers." },
+  { q: "What is the pay like?", a: "Pay varies depending on the role and performance, but performers can earn between £500 to £3,000 per scene, and studio managers can earn competitive salaries based on experience." },
+  { q: "How does Infinity Adult Studios ensure performer safety?", a: "We have strict safety protocols in place, including regular health checks, on-set safety measures, and professional coaching. Our goal is to create a safe and empowering environment for all performers." },
+  { q: "Can I work remotely?", a: "Yes, we offer opportunities for remote work, including cam modelling and online content creation. You can collaborate with our team to create content from the comfort of your own space." },
+  { q: "Is everything confidential?", a: "Absolutely. Discretion is a core value. Your identity and personal information are fully protected at every stage of the process." },
 ];
 
 const Index = () => (
@@ -191,6 +201,48 @@ const Index = () => (
             </AnimatedSection>
           ))}
         </div>
+      </div>
+    </section>
+
+    {/* FAQ Accordion with Schema */}
+    <section className="section-padding">
+      <div className="container max-w-3xl">
+        <AnimatedSection>
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-center mb-4">
+            Frequently Asked <span className="gradient-gold">Questions</span>
+          </h2>
+          <p className="text-muted-foreground text-center max-w-xl mx-auto mb-10">
+            Everything you need to know before getting started.
+          </p>
+        </AnimatedSection>
+        <Accordion type="single" collapsible className="space-y-3">
+          {homeFaqs.map((faq, i) => (
+            <AnimatedSection key={i} delay={i * 0.06}>
+              <AccordionItem value={`faq-${i}`} className="glass-card rounded-lg px-6 border-none">
+                <AccordionTrigger className="font-display text-lg font-semibold hover:no-underline text-left py-5">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-5">
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            </AnimatedSection>
+          ))}
+        </Accordion>
+        <div className="text-center mt-8">
+          <Link to="/faq" className="text-gold text-sm font-medium inline-flex items-center gap-1 hover:gap-2 transition-all">
+            View All FAQs <ArrowRight size={14} />
+          </Link>
+        </div>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": homeFaqs.map(f => ({
+            "@type": "Question",
+            "name": f.q,
+            "acceptedAnswer": { "@type": "Answer", "text": f.a }
+          }))
+        }) }} />
       </div>
     </section>
 

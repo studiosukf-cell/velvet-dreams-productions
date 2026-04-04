@@ -12,7 +12,7 @@ const blogPosts = [
   {
     slug: "how-to-start-career-adult-film",
     title: "How to Start a Career in Adult Film Production",
-    excerpt: "Breaking into the adult film industry can seem daunting, but with the right approach and a professional production company behind you, the journey is straightforward. This guide covers everything from your first application to your first day on set.",
+    excerpt: "Breaking into the adult film industry can seem daunting, but with the right approach and a professional production company behind you, the journey is straightforward.",
     date: "28 Mar 2026",
     readTime: "6 min read",
     image: studioImg,
@@ -21,7 +21,7 @@ const blogPosts = [
   {
     slug: "performer-rights-safety-standards",
     title: "Understanding Performer Rights & Safety Standards",
-    excerpt: "Your rights as a performer are paramount. From consent protocols to health screenings, learn about the comprehensive safety standards that professional UK production companies must uphold to protect their talent.",
+    excerpt: "Your rights as a performer are paramount. From consent protocols to health screenings, learn about the comprehensive safety standards that professional UK production companies must uphold.",
     date: "22 Mar 2026",
     readTime: "8 min read",
     image: btsImg,
@@ -30,7 +30,7 @@ const blogPosts = [
   {
     slug: "maximising-earnings-adult-performer",
     title: "Maximising Your Earnings as an Adult Film Performer",
-    excerpt: "Top performers can earn £2,000 or more per shoot. Learn the strategies and tips that help experienced talent maximise their day rates, book premium productions, and build a sustainable career.",
+    excerpt: "Top performers can earn £2,000 or more per shoot. Learn the strategies and tips that help experienced talent maximise their day rates and book premium productions.",
     date: "15 Feb 2026",
     readTime: "5 min read",
     image: equipmentImg,
@@ -39,7 +39,7 @@ const blogPosts = [
   {
     slug: "behind-scenes-typical-shoot-day",
     title: "Behind the Scenes: What a Typical Shoot Day Looks Like",
-    excerpt: "Curious about what happens on a professional set? From call times and makeup to filming and wrap, we walk you through every step of a typical production day at Infinity Adult Studios.",
+    excerpt: "Curious about what happens on a professional set? From call times and makeup to filming and wrap, we walk you through every step of a typical production day.",
     date: "8 Feb 2026",
     readTime: "7 min read",
     image: btsImg,
@@ -48,7 +48,7 @@ const blogPosts = [
   {
     slug: "rise-professional-adult-content-uk",
     title: "The Rise of Professional Adult Content in the UK",
-    excerpt: "The UK adult entertainment industry is experiencing a renaissance. Higher production values, better performer pay, and stricter safety standards are driving a new era of professional content creation.",
+    excerpt: "The UK adult entertainment industry is experiencing a renaissance with higher production values, better performer pay, and stricter safety standards.",
     date: "25 Jan 2026",
     readTime: "6 min read",
     image: cinematicImg,
@@ -57,11 +57,47 @@ const blogPosts = [
   {
     slug: "couples-adult-film-opportunity",
     title: "Couples in Adult Film: A Growing Opportunity",
-    excerpt: "More real-life couples are choosing to perform together, attracted by higher rates, a comfortable filming experience, and the opportunity to work as a team. Here's everything couples need to know.",
+    excerpt: "More real-life couples are choosing to perform together, attracted by higher rates and a comfortable filming experience.",
     date: "12 Jan 2026",
     readTime: "5 min read",
     image: studioImg,
     category: "Opportunities",
+  },
+  {
+    slug: "onlyfans-management-guide",
+    title: "The Complete Guide to OnlyFans Management",
+    excerpt: "Discover how professional management can transform your OnlyFans earnings. From content strategy to marketing and subscriber growth, we cover it all.",
+    date: "5 Jan 2026",
+    readTime: "9 min read",
+    image: equipmentImg,
+    category: "OnlyFans",
+  },
+  {
+    slug: "cam-modelling-tips-beginners",
+    title: "Cam Modelling Tips for Beginners: What You Need to Know",
+    excerpt: "Starting as a cam model? Learn the essentials — from choosing the right platform and equipment to building your audience and maximising tips.",
+    date: "28 Dec 2025",
+    readTime: "6 min read",
+    image: cinematicImg,
+    category: "Getting Started",
+  },
+  {
+    slug: "building-personal-brand-adult-industry",
+    title: "Building Your Personal Brand in the Adult Industry",
+    excerpt: "A strong personal brand sets top earners apart. Learn how to develop your image, grow your social media presence, and create a lasting career.",
+    date: "18 Dec 2025",
+    readTime: "7 min read",
+    image: studioImg,
+    category: "Career Growth",
+  },
+  {
+    slug: "health-wellness-adult-performers",
+    title: "Health & Wellness for Adult Performers",
+    excerpt: "Your physical and mental wellbeing comes first. From regular testing protocols to mental health support, here's how the industry protects its talent.",
+    date: "10 Dec 2025",
+    readTime: "8 min read",
+    image: btsImg,
+    category: "Safety",
   },
 ];
 
@@ -83,7 +119,7 @@ const Blog = () => (
 
     <section className="section-padding !pt-0">
       <div className="container max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {blogPosts.map((post, i) => (
             <AnimatedSection key={post.slug} delay={i * 0.08}>
               <motion.article whileHover={{ y: -4 }} className="glass-card rounded-lg overflow-hidden group h-full flex flex-col">
