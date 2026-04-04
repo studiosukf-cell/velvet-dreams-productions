@@ -17,6 +17,15 @@ const trustPoints = [
   { icon: Users, title: "All Levels Welcome", desc: "No prior experience required to get started" },
 ];
 
+const homeFaqs = [
+  { q: "What types of jobs are available?", a: "We offer a variety of adult film and cam job opportunities, including performer roles, studio management, OnlyFans management, and tech support. Whether you're a beginner or experienced, there are positions for everyone." },
+  { q: "Do I need previous experience to apply?", a: "No experience is necessary for most positions. We provide full training and guidance for newcomers, especially for models and studio managers." },
+  { q: "What is the pay like?", a: "Pay varies depending on the role and performance, but performers can earn between £500 to £3,000 per scene, and studio managers can earn competitive salaries based on experience." },
+  { q: "How does Infinity Adult Studios ensure performer safety?", a: "We have strict safety protocols in place, including regular health checks, on-set safety measures, and professional coaching. Our goal is to create a safe and empowering environment for all performers." },
+  { q: "Can I work remotely?", a: "Yes, we offer opportunities for remote work, including cam modelling and online content creation. You can collaborate with our team to create content from the comfort of your own space." },
+  { q: "Is everything confidential?", a: "Absolutely. Discretion is a core value. Your identity and personal information are fully protected at every stage of the process." },
+];
+
 const Index = () => (
   <Layout>
     {/* Hero */}
