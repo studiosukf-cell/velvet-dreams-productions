@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Shield, Award, Users, Camera } from "lucide-react";
 import StudioLocations from "@/components/StudioLocations";
 import AnimatedSection from "@/components/AnimatedSection";
-import btsBg from "@/assets/bts-production.jpg";
+import studioImg from "@/assets/studio-interior.jpg";
 
 const values = [
   { icon: Shield, title: "Safety First", desc: "Rigorous consent protocols, health screenings, and a zero-tolerance policy for unprofessional behaviour." },
@@ -33,7 +33,7 @@ const About = () => (
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <AnimatedSection>
-            <img src={btsBg} alt="Production studio" className="rounded-lg w-full h-80 lg:h-96 object-cover" loading="lazy" width={1200} height={800} />
+            <img src={studioImg} alt="Professional film production studio with cinema camera and lighting" className="rounded-lg w-full h-80 lg:h-96 object-cover" loading="lazy" width={1280} height={960} />
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <div className="space-y-5 text-foreground/70">

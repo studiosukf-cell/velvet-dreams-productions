@@ -3,8 +3,10 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
 import { ArrowRight, Clock } from "lucide-react";
 import { motion } from "framer-motion";
-import blogImg from "@/assets/blog-production.jpg";
-import btsBg from "@/assets/bts-production.jpg";
+import studioImg from "@/assets/studio-interior.jpg";
+import btsImg from "@/assets/gallery-bts1.jpg";
+import equipmentImg from "@/assets/gallery-equipment.jpg";
+import cinematicImg from "@/assets/gallery-cinematic.jpg";
 
 const blogPosts = [
   {
@@ -13,7 +15,7 @@ const blogPosts = [
     excerpt: "Breaking into the adult film industry can seem daunting, but with the right approach and a professional production company behind you, the journey is straightforward. This guide covers everything from your first application to your first day on set.",
     date: "28 Mar 2026",
     readTime: "6 min read",
-    image: blogImg,
+    image: studioImg,
     category: "Getting Started",
   },
   {
@@ -22,7 +24,7 @@ const blogPosts = [
     excerpt: "Your rights as a performer are paramount. From consent protocols to health screenings, learn about the comprehensive safety standards that professional UK production companies must uphold to protect their talent.",
     date: "22 Mar 2026",
     readTime: "8 min read",
-    image: btsBg,
+    image: btsImg,
     category: "Safety",
   },
   {
@@ -31,16 +33,16 @@ const blogPosts = [
     excerpt: "Top performers can earn £2,000 or more per shoot. Learn the strategies and tips that help experienced talent maximise their day rates, book premium productions, and build a sustainable career.",
     date: "15 Feb 2026",
     readTime: "5 min read",
-    image: blogImg,
+    image: equipmentImg,
     category: "Earnings",
   },
   {
     slug: "behind-scenes-typical-shoot-day",
     title: "Behind the Scenes: What a Typical Shoot Day Looks Like",
-    excerpt: "Curious about what happens on a professional set? From call times and makeup to filming and wrap, we walk you through every step of a typical production day at EliteFrame.",
+    excerpt: "Curious about what happens on a professional set? From call times and makeup to filming and wrap, we walk you through every step of a typical production day at Infinity Adult Studios.",
     date: "8 Feb 2026",
     readTime: "7 min read",
-    image: btsBg,
+    image: btsImg,
     category: "Industry",
   },
   {
@@ -49,7 +51,7 @@ const blogPosts = [
     excerpt: "The UK adult entertainment industry is experiencing a renaissance. Higher production values, better performer pay, and stricter safety standards are driving a new era of professional content creation.",
     date: "25 Jan 2026",
     readTime: "6 min read",
-    image: blogImg,
+    image: cinematicImg,
     category: "Industry",
   },
   {
@@ -58,7 +60,7 @@ const blogPosts = [
     excerpt: "More real-life couples are choosing to perform together, attracted by higher rates, a comfortable filming experience, and the opportunity to work as a team. Here's everything couples need to know.",
     date: "12 Jan 2026",
     readTime: "5 min read",
-    image: btsBg,
+    image: studioImg,
     category: "Opportunities",
   },
 ];
