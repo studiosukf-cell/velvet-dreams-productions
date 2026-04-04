@@ -204,6 +204,48 @@ const Index = () => (
       </div>
     </section>
 
+    {/* FAQ Accordion with Schema */}
+    <section className="section-padding">
+      <div className="container max-w-3xl">
+        <AnimatedSection>
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-center mb-4">
+            Frequently Asked <span className="gradient-gold">Questions</span>
+          </h2>
+          <p className="text-muted-foreground text-center max-w-xl mx-auto mb-10">
+            Everything you need to know before getting started.
+          </p>
+        </AnimatedSection>
+        <Accordion type="single" collapsible className="space-y-3">
+          {homeFaqs.map((faq, i) => (
+            <AnimatedSection key={i} delay={i * 0.06}>
+              <AccordionItem value={`faq-${i}`} className="glass-card rounded-lg px-6 border-none">
+                <AccordionTrigger className="font-display text-lg font-semibold hover:no-underline text-left py-5">
+                  {faq.q}
+                </AccordionTrigger>
+                <AccordionContent className="text-muted-foreground pb-5">
+                  {faq.a}
+                </AccordionContent>
+              </AccordionItem>
+            </AnimatedSection>
+          ))}
+        </Accordion>
+        <div className="text-center mt-8">
+          <Link to="/faq" className="text-gold text-sm font-medium inline-flex items-center gap-1 hover:gap-2 transition-all">
+            View All FAQs <ArrowRight size={14} />
+          </Link>
+        </div>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": homeFaqs.map(f => ({
+            "@type": "Question",
+            "name": f.q,
+            "acceptedAnswer": { "@type": "Answer", "text": f.a }
+          }))
+        }) }} />
+      </div>
+    </section>
+
     {/* CTA */}
     <section className="section-padding relative overflow-hidden">
       <div className="absolute inset-0 gradient-gold-bg opacity-10" />
