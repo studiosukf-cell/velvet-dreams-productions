@@ -3,8 +3,10 @@ import AnimatedSection from "@/components/AnimatedSection";
 import { Link } from "react-router-dom";
 import { ArrowRight, Clock } from "lucide-react";
 import { motion } from "framer-motion";
-import blogImg from "@/assets/blog-production.jpg";
-import btsBg from "@/assets/bts-production.jpg";
+import studioImg from "@/assets/studio-interior.jpg";
+import btsImg from "@/assets/gallery-bts1.jpg";
+import equipmentImg from "@/assets/gallery-equipment.jpg";
+import cinematicImg from "@/assets/gallery-cinematic.jpg";
 
 const blogPosts = [
   {
