@@ -83,7 +83,7 @@ const Blog = () => (
 
     <section className="section-padding !pt-0">
       <div className="container max-w-6xl">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {blogPosts.map((post, i) => (
             <AnimatedSection key={post.slug} delay={i * 0.08}>
               <motion.article whileHover={{ y: -4 }} className="glass-card rounded-lg overflow-hidden group h-full flex flex-col">
