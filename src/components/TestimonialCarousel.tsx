@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
-  { name: "Lexi Rose", text: "Infinity Studios helped launch my career. Everything is professional, supportive, and empowering.", role: "Performer", avatar: "LR" },
+  { name: "Lexi Rose", text: "Hussy helped launch my career. Everything is professional, supportive, and empowering.", role: "Performer", avatar: "LR" },
   { name: "Jordan Blake", text: "The team really cares about your success. Great equipment, great people, and great vibes.", role: "Performer", avatar: "JB" },
   { name: "Mia Vixen", text: "I was nervous starting out, but the support and training made me feel confident and in control.", role: "New Talent", avatar: "MV" },
 ];
