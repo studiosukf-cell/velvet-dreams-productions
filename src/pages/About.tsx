@@ -20,7 +20,7 @@ const About = () => (
         <AnimatedSection>
           <p className="text-gold uppercase tracking-[0.3em] text-sm font-medium mb-4">About Us</p>
           <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
-            Infinity <span className="gradient-gold">Adult Studios</span>
+            Hussy <span className="gradient-gold">Adult Studios</span>
           </h1>
           <p className="text-foreground/70 text-lg">
             Adult Studios & Model Management — connecting talent with real opportunities in porn jobs, cam work, and adult content creation across the UK and Europe.
@@ -37,7 +37,7 @@ const About = () => (
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <div className="space-y-5 text-foreground/70">
-              <p>Infinity Adult Studios operates at the forefront of the UK and European adult entertainment industry. Our mission is to deliver world-class content while prioritising the wellbeing and professional development of our performers.</p>
+              <p>Hussy operates at the forefront of the UK and European adult entertainment industry. Our mission is to deliver world-class content while prioritising the wellbeing and professional development of our performers.</p>
               <p>Whether you're new to adult work or an experienced adult performer, we offer full support, professional model management, and flexible working options. From porn modeling jobs and OnlyFans content support to high-end 4K/6K adult filming studios, we're here to help you take control of your career.</p>
               <p>Our network includes adult studios in the UK and Europe, fully equipped spaces for porn shoots, webcam jobs, and custom content. We offer opportunities for adult models, studio managers, and content creators with high-income potential, full discretion, and professional standards.</p>
             </div>
@@ -73,7 +73,7 @@ const About = () => (
       <div className="container max-w-2xl">
         <AnimatedSection>
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">Join Our <span className="gradient-gold">Team</span></h2>
-          <p className="text-foreground/70 mb-8">Start your adult career today with Infinity Adult Studios — where your goals become reality.</p>
+          <p className="text-foreground/70 mb-8">Start your adult career today with Hussy — where your goals become reality.</p>
           <Link to="/join">
             <Button size="lg" className="gradient-gold-bg text-primary-foreground font-bold text-lg px-10 py-6 glow-gold hover:opacity-90">
               Apply Now

@@ -44,7 +44,7 @@ const Contact = () => {
           <h1 className="font-display text-4xl md:text-6xl font-bold mb-6">
             Contact <span className="gradient-gold">Us</span>
           </h1>
-          <p className="text-foreground/70 text-lg">Have questions or want to join Infinity Adult Studios? Reach out to our team.</p>
+          <p className="text-foreground/70 text-lg">Have questions or want to join Hussy? Reach out to our team.</p>
         </div>
       </section>
 
