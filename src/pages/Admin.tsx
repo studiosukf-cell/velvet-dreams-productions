@@ -141,6 +141,7 @@ const Admin = () => {
       </div>
     </section>
   </Layout>
-);
+  );
+};
 
 export default Admin;
