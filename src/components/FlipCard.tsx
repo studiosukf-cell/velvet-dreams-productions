@@ -9,7 +9,7 @@ interface FlipCardProps {
 }
 
 const FlipCard = ({ title, desc, icon: Icon, image }: FlipCardProps) => (
-  <div className="flip-card h-48">
+  <div className="flip-card h-36 sm:h-40">
     <div className="flip-card-inner">
       <div className="flip-card-front glass-card rounded-lg overflow-hidden">
         <img src={image} alt={title} className="w-full h-full object-cover" loading="lazy" />

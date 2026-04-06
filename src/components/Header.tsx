@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoImg from "@/assets/logo-hussy.png";
 
 const navLinks = [
   { label: "Home", to: "/" },
@@ -26,9 +27,12 @@ const Header = () => {
 
       <header className="fixed top-8 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
         <div className="container flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex flex-col leading-tight">
-            <span className="font-display text-2xl md:text-3xl font-bold tracking-wider gradient-gold">Hussy</span>
-            <span className="text-[10px] md:text-xs text-muted-foreground tracking-widest uppercase">Adult Studios & Model Management</span>
+          <Link to="/" className="flex items-center gap-2">
+            <img src={logoImg} alt="Hussy logo" className="h-10 md:h-12 w-auto" width={48} height={48} />
+            <div className="flex flex-col leading-tight">
+              <span className="font-display text-xl md:text-2xl font-bold tracking-wider gradient-gold">Hussy</span>
+              <span className="text-[9px] md:text-[10px] text-muted-foreground tracking-widest uppercase">Studios & Management</span>
+            </div>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-4">

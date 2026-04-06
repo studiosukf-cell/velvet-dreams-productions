@@ -23,33 +23,32 @@ const studios = [
 ];
 
 const StudioLocations = () => (
-  <section className="section-padding">
-    <div className="container">
+  <section className="py-12 md:py-16 px-6">
+    <div className="container max-w-5xl">
       <AnimatedSection>
-        <p className="text-gold uppercase tracking-[0.2em] text-sm font-medium text-center mb-2">Global Studio Locations</p>
-        <h2 className="font-display text-3xl md:text-5xl font-bold text-center mb-4">
-          Our <span className="gradient-gold">Global Studios</span>
+        <p className="text-gold uppercase tracking-[0.2em] text-xs font-medium text-center mb-1">Global Locations</p>
+        <h2 className="font-display text-2xl md:text-3xl font-bold text-center mb-2">
+          Our <span className="gradient-gold">Studios</span>
         </h2>
-        <p className="text-muted-foreground text-center max-w-xl mx-auto mb-14">
-          Professional studios across the UK, Ireland, and Europe — shoot close to home.
+        <p className="text-muted-foreground text-center max-w-md mx-auto mb-8 text-sm">
+          Professional studios across the UK, Ireland, and Europe.
         </p>
       </AnimatedSection>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-3">
         {studios.map((s, i) => {
           const content = (
             <motion.div
-              whileHover={{ y: -4, boxShadow: "0 12px 40px -8px hsl(330 70% 55% / 0.15)" }}
-              className="glass-card rounded-lg p-5 text-center"
+              whileHover={{ y: -3 }}
+              className="glass-card rounded-lg p-3 text-center"
             >
-              <span className="text-3xl mb-2 block">{s.flag}</span>
-              <h3 className="font-display text-lg font-bold mb-1">{s.city}</h3>
-              <p className="text-muted-foreground text-xs mb-1">{s.studio}</p>
-              <p className="text-muted-foreground text-xs opacity-70">{s.country}</p>
+              <span className="text-xl mb-1 block">{s.flag}</span>
+              <h3 className="font-display text-sm font-bold">{s.city}</h3>
+              <p className="text-muted-foreground text-[10px]">{s.studio}</p>
             </motion.div>
           );
 
           return (
-            <AnimatedSection key={s.city} delay={i * 0.04}>
+            <AnimatedSection key={s.city} delay={i * 0.03}>
               {s.slug ? (
                 <Link to={`/studios/${s.slug}`} className="block">{content}</Link>
               ) : (
