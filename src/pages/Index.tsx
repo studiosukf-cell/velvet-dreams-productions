@@ -7,7 +7,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import StudioLocations from "@/components/StudioLocations";
 import ServicesGrid from "@/components/ServicesGrid";
-import ProductionsSchedule from "@/components/ProductionsSchedule";
+
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-light.jpg";
 
@@ -92,8 +92,6 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Productions Schedule */}
-    <ProductionsSchedule />
 
     {/* OnlyFans CTA */}
     <section className="section-padding">
