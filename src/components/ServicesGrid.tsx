@@ -19,17 +19,17 @@ const services = [
 ];
 
 const ServicesGrid = () => (
-  <section className="section-padding bg-secondary/40">
+  <section className="py-20 md:py-28 px-6 md:px-10 bg-secondary/40">
     <div className="container">
       <AnimatedSection>
-        <h2 className="font-display text-3xl md:text-5xl font-bold text-center mb-4">
+        <h2 className="font-display text-3xl md:text-5xl font-bold text-center mb-3">
           Our <span className="gradient-gold">Services</span>
         </h2>
-        <p className="text-muted-foreground text-center max-w-xl mx-auto mb-14">
+        <p className="text-muted-foreground text-center max-w-xl mx-auto mb-16">
           Everything you need to succeed in the adult entertainment industry.
         </p>
       </AnimatedSection>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((s, i) => (
           <AnimatedSection key={s.title} delay={i * 0.08}>
             <FlipCard title={s.title} desc={s.desc} icon={s.icon} image={s.image} />
