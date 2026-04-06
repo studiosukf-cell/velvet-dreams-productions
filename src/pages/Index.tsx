@@ -54,18 +54,40 @@ const Index = () => (
       </div>
     </section>
 
+    {/* Introduction / Keywords Section */}
+    <section className="py-14 md:py-20 px-6">
+      <div className="container max-w-4xl">
+        <AnimatedSection>
+          <h2 className="font-display text-2xl md:text-4xl font-bold text-center mb-4">
+            Your Gateway to <span className="gradient-gold">Adult Industry Careers</span>
+          </h2>
+          <p className="text-muted-foreground text-center text-base md:text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
+            Hussy is the UK's leading adult entertainment agency connecting talent with real opportunities in <strong className="text-foreground">adult film jobs</strong>, <strong className="text-foreground">cam modelling</strong>, <strong className="text-foreground">OnlyFans management</strong>, and <strong className="text-foreground">content creation</strong>. Whether you're looking for <strong className="text-foreground">porn jobs in London</strong>, <strong className="text-foreground">webcam work in Manchester</strong>, or <strong className="text-foreground">adult modelling across the UK and Europe</strong> — we provide a safe, professional, and discreet pathway to a high-earning career.
+          </p>
+          <div className="flex flex-wrap justify-center gap-2">
+            {["Porn Jobs", "Adult Film Casting", "Cam Studio Jobs", "OnlyFans Management", "Adult Modelling", "Webcam Work", "Content Creator Jobs", "Adult Recruitment UK"].map((kw) => (
+              <span key={kw} className="text-xs font-medium px-3 py-1.5 rounded-full bg-primary/10 text-primary border border-primary/20">
+                {kw}
+              </span>
+            ))}
+          </div>
+        </AnimatedSection>
+      </div>
+    </section>
+
     {/* Talent CTA */}
-    <section className="section-padding bg-secondary/40">
+    <section className="py-12 md:py-16 px-6 bg-secondary/40">
       <div className="container text-center max-w-3xl">
         <AnimatedSection>
-          <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">We're Always Looking for <span className="gradient-gold">New Talent</span></h2>
-          <p className="text-muted-foreground text-lg mb-8">Join Hussy — where your future in the adult industry begins with professionalism, respect, and opportunity.</p>
+          <h2 className="font-display text-2xl md:text-4xl font-bold mb-4">We're Always Looking for <span className="gradient-gold">New Talent</span></h2>
+          <p className="text-muted-foreground text-base mb-6">Join Hussy — where your future in the adult industry begins with professionalism, respect, and opportunity.</p>
           <Link to="/join">
             <Button size="lg" className="gradient-gold-bg text-primary-foreground font-bold text-lg px-10 py-6 glow-gold hover:opacity-90 transition-opacity">Apply Now</Button>
           </Link>
         </AnimatedSection>
       </div>
     </section>
+
 
     <ServicesGrid />
 
