@@ -28,12 +28,29 @@ const statusColor: Record<string, string> = {
   Interview: "bg-purple-100 text-purple-700",
 };
 
-const Admin = () => (
+const Admin = () => {
+  const { signOut, user } = useAuth();
+  const navigate = useNavigate();
+
+  const handleSignOut = async () => {
+    await signOut();
+    navigate("/admin/login");
+  };
+
+  return (
   <Layout>
     <section className="section-padding">
       <div className="container max-w-6xl">
         <AnimatedSection>
-          <p className="text-gold uppercase tracking-[0.3em] text-sm font-medium mb-4">Dashboard</p>
+          <div className="flex items-center justify-between mb-4">
+            <p className="text-gold uppercase tracking-[0.3em] text-sm font-medium">Dashboard</p>
+            <div className="flex items-center gap-3">
+              <span className="text-xs text-muted-foreground">{user?.email}</span>
+              <Button variant="outline" size="sm" onClick={handleSignOut}>
+                <LogOut size={14} className="mr-1" /> Sign Out
+              </Button>
+            </div>
+          </div>
           <h1 className="font-display text-4xl md:text-5xl font-bold mb-8">
             Admin <span className="gradient-gold">Backend</span>
           </h1>
