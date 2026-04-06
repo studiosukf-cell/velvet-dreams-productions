@@ -1,8 +1,10 @@
 import Layout from "@/components/Layout";
 import AnimatedSection from "@/components/AnimatedSection";
 import { motion } from "framer-motion";
-import { Users, FileText, BarChart3, Mail, Camera, Calendar, TrendingUp, Eye } from "lucide-react";
+import { Users, FileText, BarChart3, Mail, Camera, Calendar, TrendingUp, Eye, LogOut } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useAuth } from "@/hooks/useAuth";
+import { useNavigate } from "react-router-dom";
 
 const stats = [
   { label: "Total Applications", value: "1,247", change: "+12%", icon: Users },
