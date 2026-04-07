@@ -28,11 +28,7 @@ const Header = () => {
       <header className="fixed top-8 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
         <div className="container flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logoImg} alt="Hussy logo" className="h-10 md:h-12 w-auto" width={48} height={48} />
-            <div className="flex flex-col leading-tight">
-              <span className="font-display text-xl md:text-2xl font-bold tracking-wider gradient-gold">Hussy</span>
-              <span className="text-[9px] md:text-[10px] text-muted-foreground tracking-widest uppercase">Studios & Management</span>
-            </div>
+            <img src={logoImg} alt="Hussy logo" className="h-14 md:h-16 w-auto" width={64} height={64} />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-4">

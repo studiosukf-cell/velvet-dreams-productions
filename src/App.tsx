@@ -10,6 +10,7 @@ import Join from "./pages/Join";
 import About from "./pages/About";
 import Gallery from "./pages/Gallery";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import OnlyFans from "./pages/OnlyFans";
 import Faq from "./pages/Faq";
 import Contact from "./pages/Contact";
@@ -33,6 +34,7 @@ const App = () => (
             <Route path="/about" element={<About />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/onlyfans" element={<OnlyFans />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/contact" element={<Contact />} />

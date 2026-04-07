@@ -122,25 +122,27 @@ const Blog = () => (
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {blogPosts.map((post, i) => (
             <AnimatedSection key={post.slug} delay={i * 0.08}>
-              <motion.article whileHover={{ y: -4 }} className="glass-card rounded-lg overflow-hidden group h-full flex flex-col">
-                <div className="h-52 overflow-hidden relative">
-                  <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-                  <span className="absolute top-3 left-3 bg-card/90 backdrop-blur-sm text-xs font-medium px-3 py-1 rounded-full text-gold border border-border">
-                    {post.category}
-                  </span>
-                </div>
-                <div className="p-6 flex flex-col flex-1">
-                  <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
-                    <span>{post.date}</span>
-                    <span className="flex items-center gap-1"><Clock size={12} /> {post.readTime}</span>
+              <Link to={`/blog/${post.slug}`} className="h-full">
+                <motion.article whileHover={{ y: -4 }} className="glass-card rounded-lg overflow-hidden group h-full flex flex-col">
+                  <div className="h-52 overflow-hidden relative">
+                    <img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                    <span className="absolute top-3 left-3 bg-card/90 backdrop-blur-sm text-xs font-medium px-3 py-1 rounded-full text-gold border border-border">
+                      {post.category}
+                    </span>
                   </div>
-                  <h2 className="font-display text-xl font-semibold mb-3 group-hover:text-gold transition-colors">{post.title}</h2>
-                  <p className="text-muted-foreground text-sm flex-1">{post.excerpt}</p>
-                  <span className="text-gold text-sm font-medium inline-flex items-center gap-1 mt-4 group-hover:gap-2 transition-all">
-                    Read Article <ArrowRight size={14} />
-                  </span>
-                </div>
-              </motion.article>
+                  <div className="p-6 flex flex-col flex-1">
+                    <div className="flex items-center gap-3 text-xs text-muted-foreground mb-3">
+                      <span>{post.date}</span>
+                      <span className="flex items-center gap-1"><Clock size={12} /> {post.readTime}</span>
+                    </div>
+                    <h2 className="font-display text-xl font-semibold mb-3 group-hover:text-gold transition-colors">{post.title}</h2>
+                    <p className="text-muted-foreground text-sm flex-1">{post.excerpt}</p>
+                    <span className="text-gold text-sm font-medium inline-flex items-center gap-1 mt-4 group-hover:gap-2 transition-all">
+                      Read Article <ArrowRight size={14} />
+                    </span>
+                  </div>
+                </motion.article>
+              </Link>
             </AnimatedSection>
           ))}
         </div>
