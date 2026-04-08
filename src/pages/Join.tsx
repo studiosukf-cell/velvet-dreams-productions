@@ -6,7 +6,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Shield, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+
+const FORMSPREE_URL = "https://formspree.io/f/mdapjlbl";
 
 const steps = [
   { num: "01", title: "Submit Your Application", desc: "Fill out the simple form below with your details." },
@@ -26,27 +27,30 @@ const Join = () => {
 
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
+    formData.set("experience_level", experience);
+    formData.set("form_type", "performer_application");
 
-    const { error } = await supabase.from("performer_applications").insert({
-      full_name: formData.get("full_name") as string,
-      age: parseInt(formData.get("age") as string),
-      email: formData.get("email") as string,
-      phone: (formData.get("phone") as string) || null,
-      location: formData.get("location") as string,
-      experience_level: experience || null,
-      about: (formData.get("about") as string) || null,
-    });
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
 
-    setSubmitting(false);
+      setSubmitting(false);
 
-    if (error) {
+      if (!res.ok) {
+        toast({ title: "Error", description: "Something went wrong. Please try again.", variant: "destructive" });
+        return;
+      }
+
+      toast({ title: "Application Received", description: "We'll be in touch within 24 hours." });
+      form.reset();
+      setExperience("");
+    } catch {
+      setSubmitting(false);
       toast({ title: "Error", description: "Something went wrong. Please try again.", variant: "destructive" });
-      return;
     }
-
-    toast({ title: "Application Received", description: "We'll be in touch within 24 hours." });
-    form.reset();
-    setExperience("");
   };
 
   return (

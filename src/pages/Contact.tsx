@@ -5,7 +5,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Phone, MessageCircle, MapPin } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
+
+const FORMSPREE_URL = "https://formspree.io/f/mdapjlbl";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -18,22 +19,26 @@ const Contact = () => {
     const form = e.target as HTMLFormElement;
     const formData = new FormData(form);
 
-    const { error } = await supabase.from("contact_submissions").insert({
-      name: formData.get("name") as string,
-      email: formData.get("email") as string,
-      subject: formData.get("subject") as string,
-      message: formData.get("message") as string,
-    });
+    try {
+      const res = await fetch(FORMSPREE_URL, {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
 
-    setSubmitting(false);
+      setSubmitting(false);
 
-    if (error) {
+      if (!res.ok) {
+        toast({ title: "Error", description: "Something went wrong. Please try again.", variant: "destructive" });
+        return;
+      }
+
+      toast({ title: "Message Sent", description: "We'll get back to you shortly." });
+      form.reset();
+    } catch {
+      setSubmitting(false);
       toast({ title: "Error", description: "Something went wrong. Please try again.", variant: "destructive" });
-      return;
     }
-
-    toast({ title: "Message Sent", description: "We'll get back to you shortly." });
-    form.reset();
   };
 
   return (
