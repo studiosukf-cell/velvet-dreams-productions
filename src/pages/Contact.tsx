@@ -75,7 +75,7 @@ const Contact = () => {
                 <MapPin size={22} className="text-neon-pink" />
               </div>
               <h3 className="font-display text-lg font-semibold mb-1">Location</h3>
-              <p className="text-muted-foreground text-sm">Bridge Street, Manchester, M3 3BW</p>
+              <p className="text-muted-foreground text-sm">Oxford Road, Manchester, M15 6JA</p>
             </div>
           </div>
 

@@ -53,7 +53,7 @@ const Footer = () => (
           <p className="text-sm text-muted-foreground mb-2">
             <a href="https://wa.me/447920451830" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">💬 WhatsApp</a>
           </p>
-          <p className="text-sm text-muted-foreground mb-4">📍 Bridge Street, Manchester, M3 3BW</p>
+          <p className="text-sm text-muted-foreground mb-4">📍 Oxford Road, Manchester, M15 6JA</p>
           <div className="flex flex-col gap-2">
             <Link to="/faq" className="text-sm text-muted-foreground hover:text-gold transition-colors">FAQ</Link>
             <Link to="/contact" className="text-sm text-muted-foreground hover:text-gold transition-colors">Contact Us</Link>
