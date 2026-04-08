@@ -21,15 +21,15 @@ const studioData: Record<string, { city: string; studio: string; address: string
   },
   manchester: {
     city: "Manchester",
-    studio: "Bridge Street Studio",
-    address: "Bridge Street, Manchester, M3 3BW",
-    description: "Our Manchester headquarters at Bridge Street is Hussy's flagship studio. Featuring state-of-the-art 4K/6K production suites, dedicated cam rooms, and a professional team, it's the hub of adult film production in the North West.",
-    metaDesc: "Porn jobs in Manchester with Hussy. Adult film work at our Bridge Street studio. Earn £1,500-£2,250 per day. No experience needed.",
+    studio: "Oxford Road Studio",
+    address: "Oxford Road, Manchester, M15 6JA",
+    description: "Our Manchester headquarters on Oxford Road is Hussy's flagship studio. Featuring state-of-the-art 4K/6K production suites, dedicated cam rooms, and a professional team, it's the hub of adult film production in the North West.",
+    metaDesc: "Porn jobs in Manchester with Hussy. Adult film work at our Oxford Road studio. Earn £1,500-£2,250 per day. No experience needed.",
     services: ["Adult Film Production", "Cam Studio Hire", "Model Management", "OnlyFans Management", "Recruitment", "Studio Hire"],
     faqs: [
-      { q: "Where is the Manchester studio?", a: "Our flagship studio is on Bridge Street, Manchester, M3 3BW. It's in the city centre, a short walk from Deansgate and Spinningfields." },
+      { q: "Where is the Manchester studio?", a: "Our flagship studio is on Oxford Road, Manchester, M15 6JA. It's easily accessible in south Manchester." },
       { q: "What are the Manchester shoot dates?", a: "We run regular productions throughout the year. Current dates include shoots in May, June, and July 2026. Male performers earn £1,500/day and female performers earn £2,250/day." },
-      { q: "Is the Manchester studio the main office?", a: "Yes, Bridge Street is our headquarters and flagship location with the largest studio space, multiple sets, and our management team." },
+      { q: "Is the Manchester studio the main office?", a: "Yes, Oxford Road is our headquarters and flagship location with the largest studio space, multiple sets, and our management team." },
     ],
   },
   birmingham: {
