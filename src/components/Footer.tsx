@@ -48,7 +48,7 @@ const Footer = () => (
         <div>
           <h4 className="font-display text-lg font-semibold text-gold mb-4">Contact</h4>
           <p className="text-sm text-muted-foreground mb-2">
-            <a href="tel:+447920830451" className="hover:text-gold transition-colors">📞 07920 830451</a>
+            <a href="tel:+447920451830" className="hover:text-gold transition-colors">📞 07920 451830</a>
           </p>
           <p className="text-sm text-muted-foreground mb-2">
             <a href="https://wa.me/447920451830" target="_blank" rel="noopener noreferrer" className="hover:text-gold transition-colors">💬 WhatsApp</a>

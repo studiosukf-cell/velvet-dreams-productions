@@ -22,13 +22,14 @@ const Header = () => {
   return (
     <>
       <div className="fixed top-0 left-0 right-0 z-[60] gradient-pink-blue-bg text-primary-foreground text-center py-2 text-sm font-medium">
-        Call us now: <a href="tel:+447920830451" className="underline font-bold">07920 830451</a>
+        Call us now: <a href="tel:+447920451830" className="underline font-bold">07920 451830</a>
       </div>
 
       <header className="fixed top-8 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
         <div className="container flex items-center justify-between h-16 md:h-20">
           <Link to="/" className="flex items-center gap-2">
-            <img src={logoImg} alt="Hussy logo" className="h-14 md:h-16 w-auto" width={64} height={64} />
+            <img src={logoImg} alt="Hussy Studios logo" className="h-14 md:h-16 w-auto" width={64} height={64} />
+            <span className="font-display font-bold text-lg md:text-xl gradient-gold leading-tight hidden sm:inline">Hussy Studios</span>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-4">

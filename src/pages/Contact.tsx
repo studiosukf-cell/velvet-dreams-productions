@@ -61,7 +61,7 @@ const Contact = () => {
                 <Phone size={22} className="text-primary-foreground" />
               </div>
               <h3 className="font-display text-lg font-semibold mb-1">Phone</h3>
-              <p className="text-muted-foreground text-sm">07920 451 830</p>
+              <p className="text-muted-foreground text-sm">07920 451830</p>
             </a>
             <a href="https://wa.me/447920451830" target="_blank" rel="noopener noreferrer" className="glass-card rounded-lg p-6 text-center hover-lift">
               <div className="w-14 h-14 rounded-full bg-[hsl(142,70%,35%)] flex items-center justify-center mx-auto mb-4">
