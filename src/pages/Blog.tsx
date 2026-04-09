@@ -7,6 +7,12 @@ import studioImg from "@/assets/studio-interior.jpg";
 import btsImg from "@/assets/gallery-bts1.jpg";
 import equipmentImg from "@/assets/gallery-equipment.jpg";
 import cinematicImg from "@/assets/gallery-cinematic.jpg";
+import legalGuideImg from "@/assets/blog-legal-guide.jpg";
+import choosingAgencyImg from "@/assets/blog-choosing-agency.jpg";
+import socialMediaImg from "@/assets/blog-social-media.jpg";
+import mentalHealthImg from "@/assets/blog-mental-health.jpg";
+import studioEquipmentImg from "@/assets/blog-studio-equipment.jpg";
+import financialPlanningImg from "@/assets/blog-financial-planning.jpg";
 
 const blogPosts = [
   {
@@ -105,7 +111,7 @@ const blogPosts = [
     excerpt: "Understanding the legal landscape of adult work in the UK is essential for anyone entering the industry. From contracts and tax obligations to content ownership and privacy rights.",
     date: "1 Dec 2025",
     readTime: "10 min read",
-    image: equipmentImg,
+    image: legalGuideImg,
     category: "Legal",
   },
   {
@@ -114,7 +120,7 @@ const blogPosts = [
     excerpt: "Not all agencies are created equal. Learn what separates legitimate, professional talent agencies from exploitative ones and how to find an agency that truly supports your career.",
     date: "22 Nov 2025",
     readTime: "10 min read",
-    image: studioImg,
+    image: choosingAgencyImg,
     category: "Getting Started",
   },
   {
@@ -123,7 +129,7 @@ const blogPosts = [
     excerpt: "Growing your audience on social media as an adult content creator requires a strategic approach. Learn platform-specific tactics, content planning, and audience engagement techniques.",
     date: "14 Nov 2025",
     readTime: "10 min read",
-    image: cinematicImg,
+    image: socialMediaImg,
     category: "Career Growth",
   },
   {
@@ -132,7 +138,7 @@ const blogPosts = [
     excerpt: "The adult industry presents unique mental health challenges. From managing stigma to maintaining healthy boundaries, this guide covers essential wellbeing strategies for performers.",
     date: "5 Nov 2025",
     readTime: "10 min read",
-    image: btsImg,
+    image: mentalHealthImg,
     category: "Safety",
   },
   {
@@ -141,7 +147,7 @@ const blogPosts = [
     excerpt: "Modern adult content production uses cinema-grade equipment and cutting-edge technology. Discover the cameras, lighting, and post-production tools that create premium content.",
     date: "28 Oct 2025",
     readTime: "10 min read",
-    image: equipmentImg,
+    image: studioEquipmentImg,
     category: "Industry",
   },
   {
@@ -150,7 +156,7 @@ const blogPosts = [
     excerpt: "Managing your finances as an adult performer requires careful planning. From understanding self-employment tax to saving strategies and pension planning, this guide covers it all.",
     date: "20 Oct 2025",
     readTime: "10 min read",
-    image: studioImg,
+    image: financialPlanningImg,
     category: "Earnings",
   },
 ];
