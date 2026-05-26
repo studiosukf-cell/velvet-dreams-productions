@@ -208,7 +208,7 @@ const Studio = () => {
             "name": `Hussy — ${data.city} Studio`,
             "description": data.metaDesc,
             "address": { "@type": "PostalAddress", "addressLocality": data.city, "addressCountry": "GB" },
-            "url": `https://adultfilmstudios.infy.uk/studios/${slug}`,
+            "url": `https://hussypornstars.com/studios/${slug}`,
           }) }} />
 
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
