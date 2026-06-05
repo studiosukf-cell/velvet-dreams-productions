@@ -1,0 +1,11 @@
+{
+  "buildCommand": "echo 'Static build - no build needed'",
+  "outputDirectory": "static-build",
+  "cleanUrls": true,
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
